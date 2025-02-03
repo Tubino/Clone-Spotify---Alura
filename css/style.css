@@ -30,6 +30,14 @@ body {
   background-color: var(--background-color);
 }
 
+.create__button:hover,
+.login:hover,
+.footer-btn:hover {
+  filter: brightness(1.2);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
 .sidebar-navigation {
   padding: 0.8rem 1.6rem;
   position: fixed;
@@ -40,7 +48,7 @@ body {
 }
 
 .logo img {
-  width: 8rem;
+  width: 10rem;
   margin-bottom: 2rem;
 }
 
@@ -66,7 +74,7 @@ ul a {
   color: var(--content-secondary);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: var(--ff-navigation);
 }
 
@@ -141,6 +149,7 @@ ul a {
   width: 48%;
 
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .cookies {
@@ -228,11 +237,10 @@ ul a {
   grid-gap: 1.6rem;
   gap: 1.6rem;
   margin-bottom: 1.6rem;
+  padding: 1.6rem 3rem;
 
-  /* display: grid;
-  gap: 16px;
   grid-gap: 32px;
-  margin: 0; */
+  margin: 0;
 }
 
 /* cards */
@@ -307,4 +315,118 @@ ul a {
   height: auto;
   width: 10.7rem;
   transform: rotate(25deg) translate(18%, -2%);
+}
+
+/* Card do artista */
+
+.artist {
+  --column-count: 5;
+  --grid-gap: 2.4rem;
+  --min-container-width: 37.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-container {
+  grid-gap: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  min-width: 76.7rem;
+}
+
+.artist-card {
+  background: #181818;
+  border-radius: 0.8rem;
+  -ms-flex: 1;
+  flex: 1;
+  isolation: isolate;
+  padding: 1.6rem;
+  position: relative;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.artist-card:hover {
+  background-color: #252525;
+}
+
+.card-img {
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.artist-img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-height: 6.2rem;
+}
+
+.card-text a {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.artist-name {
+  margin-top: 1rem;
+  font-family: var(--ff-navigation);
+  box-sizing: border-box;
+  margin-block: 0rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-block-end: 0.8rem;
+}
+
+.artist-categorie {
+  font-family: var(--ff-navigation);
+  color: #6a6a6a;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.play {
+  position: relative;
+}
+
+.play .fa-play {
+  position: absolute;
+  right: 1rem;
+  top: 23rem;
+  padding: 1.8rem;
+  background-color: #1db954;
+  border-radius: 100%;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+
+.artist-card:hover .play .fa-play {
+  opacity: 1;
+  transform: translateY(1rem);
+}
+
+.play .fa-play:hover {
+  padding: 2rem;
+  cursor: pointer;
+}
+
+#result-artist {
+  padding: 2rem 4rem;
 }

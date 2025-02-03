@@ -1,0 +1,43 @@
+footer {
+  color: var(--content-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  padding: 1.6rem 4rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to right, #ae2896, #509bf5);
+}
+
+.footer-text {
+  flex-shrink: 0;
+  font-family: var(--ff-navigation);
+}
+
+.footer-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-text p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+
+.footer-btn {
+  padding: 1.6rem 3.8rem;
+  border: none;
+  border-radius: 2.4rem;
+
+  font-size: 1.6rem;
+  font-family: var(--ff-navigation);
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}

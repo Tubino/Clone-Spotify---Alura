@@ -92,4 +92,5 @@
   font-weight: 700;
   font-size: 1.6rem;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
